@@ -1,1 +1,4 @@
-kk
+It is a human detection system
+It detects the human through its body part
+Whenever a human is detected it builds a square frame around it for flexibilty in viewing
+It can be used in CCTVs and along withb some amendments it can be used as a host based intrusion detection system whenever an unauthorized personnel will enter a workspace 
