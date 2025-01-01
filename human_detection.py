@@ -18,18 +18,18 @@ while True:
 #imlist: a list containing the positions of detected keypoints (e.g., joints, limbs) 
 #bbox: The bounding box coordinates that enclose the detected pose.
     imlist,bbox=detector.findPosition(img)
-#it will print the elements in array if there is any human detection
-#otherwise it will print an empty array to help keeping tracks/logs in form of array
-    print(imlist)
+#it will store the elements in list if there is any human detection
+#when no human is detected the list will be empty
+    
     if len(imlist)>0:
         print('Human Detected')
 
 # displays the captured frame in a window named 'Output'.
     cv2.imshow('Output',img)
 #the wait shows the delay in capturing all the images and combining it into one video like frame with a wait of 1 milli second
-    cv2.waitKey(1)
+    q=cv2.waitKey(1)
 #to stop the capturing of image we we'll click "q" key
-    if cv2.waitKey(1) & 0xFF == ord('q'): 
+    if q== ord('q'): 
         break
 #it will help to terminate the running output window of camera monitoring
 
